@@ -1,0 +1,96 @@
+@charset "utf-8";
+* {
+    box-sizing: border-box;
+    margin:0; padding:0; list-style: none; text-decoration: none;
+    color:#333;
+}
+body, html {background: #fff;}
+/* .sub {display:none;} */
+/* .popup{display:none;} */
+
+
+/* 주조색
+005aff
+
+보조색 
+fffa6f
+ */
+#popup {
+    border:3px solid #005aff;
+    background-color:#fff;
+    position:fixed; left:50%; top:50%; transform:translate(-50%,-50%);
+    width:500px; height:400px; z-index:999; padding:20px;
+    display:none;
+}
+#popup h1 {}
+#popup p {margin-top:50px;}
+#popup .close {
+    background-color: #005aff;padding: 10px 20px;
+    color:#fff; position:absolute;
+    right:20px; bottom:20px;
+}
+
+.h_bg {background:#fffa6f;}
+.h_bg header {
+    background:aquamarine;
+    width:1200px; margin:0 auto; height:100px;
+    display:flex; justify-content: space-between; align-items: center;
+}
+.h_bg header h1 {}
+.h_bg header h1 a {}
+.h_bg header h1 a img {width:100%;}
+.h_bg header nav {}
+.h_bg header nav > ul {background-color: lightblue; display: flex; }
+.h_bg header nav > ul > li {position:relative;}
+.h_bg header nav > ul > li > a {display:block; line-height:40px; width:150px; text-align:center;}
+/* 메인 메뉴 중 하나에 마우스를 올리면(mouse over) 하이라이트 되고, 벗어나면 (mouse out) 하이라이트를 해제한다.  */
+.h_bg header nav > ul > li > a:hover {background-color: #005aff; color:#fff;}
+.h_bg header nav > ul > li >.sub {
+    background:#fff; position:absolute; text-align: center;
+    width:100%; height:200px;
+}
+.h_bg header nav > ul > li >.sub > li{}
+.h_bg header nav > ul > li >.sub > li > a {line-height: 40px; width:100%; display: block; text-align: center;}
+/* 서브 메뉴 중 하나에 마우스를 올리면(mouse over) 하이라이트 되고 벗어나면 (mouse out) 하이라이트를 해제한다. */
+.h_bg header nav > ul > li >.sub > li > a:hover {border:2px solid #005aff;}
+/* main */
+main {width:1200px; margin:0 auto;}
+main #slide_wrap {width:1200px; height:300px; overflow: hidden;}
+/* 이미지가 좌에서 우 또는 위에서 좌로 이동하면서 전환되어야한다. */
+/* 위 조건 수행을 위해 정렬 css */
+main #slide_wrap #slide_container {
+    display: flex;
+    /* 이동하면서 전환되어야 한다. */
+    transition:transform 0.5s;
+}
+main #slide_wrap #slide_container .slide {}
+/* main #slide_wrap #slide_container .slide:nth-child(2),
+main #slide_wrap #slide_container .slide:last-child {display:none;} */
+main #slide_wrap #slide_container .slide img {}
+main #contents {display:flex; width:1200px; height:200px; background-color: lightcoral;}
+main #contents > * {width:400px;}
+main #contents .c1 {}
+main #contents .c1 .title {display:flex;}
+main #contents .c1 .title h2 {text-align:center; color:#fff;padding:5px; }
+main #contents .c1 .title .active {background-color:#005aff; padding:5px;}
+main #contents .c1 .contents {}
+main #contents .c1 .contents .notice {background:lime; line-height:2;}
+main #contents .c1 .contents .notice {}
+main #contents .c1 .contents .notice a {}
+main #contents .c1 .contents .gallery {display:flex; display:none;}
+main #contents .c1 .contents .gallery a {margin:15px 5px;}
+main #contents .c1 .contents .gallery a img {width:100%;}
+
+/* footer */
+.f_bg {background-color: #fffa6f;}
+.f_bg footer {
+    width:1200px; margin:0 auto; height:100px;
+    display:flex; justify-content:space-between; align-items: center;
+}
+.f_bg footer h1 {}
+.f_bg footer h1 a {}
+.f_bg footer h1 a img {}
+.f_bg footer .f_right {background:lightseagreen; text-align:center; margin:0 auto;}
+.f_bg footer .f_right .top {background:lightgreen; }
+.f_bg footer .f_right .top a {}
+.f_bg footer .f_right p {}
